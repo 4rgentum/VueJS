@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Examples</title>
+    <script src="sol.js" defer></script> <!-- Путь к скомпилированному JavaScript -->
+</head>
+<body>
+    <h1>Примеры TypeScript</h1>
+
+    <!-- 2. Класс User с интерфейсом -->
+    <h2>Создание пользователя</h2>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" placeholder="Введите имя"><br><br>
+    <label for="age">Возраст:</label>
+    <input type="number" id="age" placeholder="Введите возраст"><br><br>
+    <button onclick="createUser()">Создать пользователя</button>
+    <div id="user-info"></div>
+
+    <hr>
+
+    <!-- 3. Типизация через псевдонимы типов -->
+    <h2>Типизация через псевдонимы типов</h2>
+    <button onclick="createUserWithAlias()">Создать пользователя с псевдонимом типа</button>
+    <div id="user-alias-info"></div>
+
+    <hr>
+
+    <!-- 4. Перегруженная функция distance -->
+    <h2>Вычисление расстояния между точками</h2>
+    <label for="x1">X1:</label>
+    <input type="number" id="x1" placeholder="X1"><br><br>
+    <label for="y1">Y1:</label>
+    <input type="number" id="y1" placeholder="Y1"><br><br>
+    <label for="x2">X2:</label>
+    <input type="number" id="x2" placeholder="X2"><br><br>
+    <label for="y2">Y2:</label>
+    <input type="number" id="y2" placeholder="Y2"><br><br>
+    <button onclick="calculateDistance()">Вычислить расстояние</button>
+    <div id="distance-result"></div>
+
+    <hr>
+
+    <!-- 5. Класс бинарного дерева -->
+    <h2>Бинарное дерево</h2>
+    <label for="tree-value">Значение для вставки в дерево:</label>
+    <input type="number" id="tree-value" placeholder="Введите значение"><br><br>
+    <button onclick="insertTreeValue()">Вставить в дерево</button>
+    <button onclick="searchTreeValue()">Поиск в дереве</button>
+    <button onclick="getTreeHeight()">Высота дерева</button>
+    <div id="tree-result"></div>
+
+    <hr>
+
+    <!-- 6. Паттерны -->
+    <h2>Пример использования паттернов</h2>
+    <button onclick="testStrategyPattern()">Пример паттерна Strategy</button>
+    <button onclick="testObserverPattern()">Пример паттерна Observer</button>
+    <button onclick="testAdapterPattern()">Пример паттерна Adapter</button>
+    <div id="pattern-result"></div>
+</body>
+</html>
+

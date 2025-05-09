@@ -1,0 +1,16 @@
+.numbers {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+// Recursive mixin to generate classes 1 through 100
+.generate-numbers(@i) when (@i > 0) {
+  .generate-numbers(@i - 1);
+  .number-@{i} {
+    // Use direct variable references inside rgb() and arithmetic
+    color: rgb(@i, (256 - @i), 0);
+    margin: 4px;
+  }
+}
+// Start generation
+.generate-numbers(100);

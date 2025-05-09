@@ -1,0 +1,53 @@
+$light-grey: #f0f0f0
+
+= center
+  text-align: center
+
+body
+  font-family: sans-serif
+  display: flex
+  flex-direction: column
+  min-height: 100vh
+
+  header
+    +center
+    margin-bottom: 20px
+
+    h1
+      font-weight: bold
+
+    nav
+      background-color: $light-grey
+      padding: 10px
+
+      a
+        margin: 0 8px
+        text-decoration: none
+        color: black
+
+        &:hover
+          text-decoration: underline
+
+  .characteristics
+    background-color: $light-grey
+    padding: 12px
+    +center
+    margin-bottom: 20px
+
+  .columns
+    display: flex
+    justify-content: space-around
+    background-color: $light-grey
+    padding: 12px
+    margin-bottom: 20px
+
+    div
+      width: 30%
+      +center
+
+  footer
+    background-color: $light-grey
+    padding: 10px
+    +center
+    margin-top: auto
+

@@ -1,0 +1,64 @@
+$light-grey: #f0f0f0;
+
+@mixin center {
+  text-align: center;
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  header {
+    @include center;
+    margin-bottom: 20px;
+
+    h1 {
+      font-weight: bold;
+    }
+
+    nav {
+      background-color: $light-grey;
+      padding: 10px;
+
+      a {
+        margin: 0 8px;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .characteristics {
+    background-color: $light-grey;
+    padding: 12px;
+    @include center;
+    margin-bottom: 20px;
+  }
+
+  .columns {
+    display: flex;
+    justify-content: space-around;
+    background-color: $light-grey;
+    padding: 12px;
+    margin-bottom: 20px;
+
+    div {
+      width: 30%;
+      @include center;
+    }
+  }
+
+  footer {
+    background-color: $light-grey;
+    padding: 10px;
+    @include center;
+    margin-top: auto;
+  }
+}
+
