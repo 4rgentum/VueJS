@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Пример</title>
+  <style>
+    body {
+      font-size: 22px;
+      font-family: Arial, sans-serif;
+    }
+    /* "Добро пожаловать!" жирным и шрифт Times New Roman */
+    #welcome {
+    font-size: 48px;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    margin-bottom: 10px;
+    }
+    /* Цветовые классы для отдельных букв */
+    .red { color: red; }
+    .blue { color: blue; }
+    /* Подчеркивание для слова вас */
+    .underline { text-decoration: underline; }
+    /* Жирность для "в нашем" */
+    .bold { font-weight: bold; }
+    /* Таблица */
+    table {
+      border-collapse: collapse;
+      background-color: aqua;
+      width: 60%;
+      margin-top: 15px;
+      font-weight: normal;
+    }
+    table, th, td {
+      border: 1px solid black;
+      padding: 8px;
+      text-align: left;
+    }
+    /* Убрать жирность у заголовка таблицы */
+    th {
+      font-weight: normal;
+    }
+    /* Стиль для отображения литералов тегов */
+    .literal {
+      font-family: monospace;
+      font-weight: normal;
+    }
+  </style>
+</head>
+<body>
+  <!-- Заголовок -->
+  <h1 id="welcome">Добро пожаловать!</h1>
+
+  <!-- Приветствие с точным форматированием букв -->
+  <p>
+    <em>
+      <span class="red">П</span><span class="blue">р</span><span class="red">и</span><span class="blue">в</span><span class="red">е</span><span class="blue">т</span><span class="red">с</span><span class="blue">т</span><span class="red">в</span><span class="blue">у</span><span class="red">е</span><span class="red">м</span>
+    </em>
+    
+    <u class="underline">
+      <span class="red">в</span><span class="blue">а</span><span class="red">с</span>
+    </u>
+    
+    <strong class="bold">
+      <span class="red">в</span><span class="blue"> </span><span class="red">н</span><span class="blue">а</span><span class="red">ш</span><span class="blue">е</span><span class="red">м</span>
+    </strong>
+    
+    <a href="https://market.yandex.ru/" target="_blank">магазине</a>!
+  </p>
+
+  <!-- Теорема Пифагора как литерал -->
+  <p class="literal">&lt;h1&gt;Теорема Пифагора&lt;/h1&gt;: <em>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></em>
+
+  <!-- Информационная таблица -->
+  <table>
+    <tr>
+      <th colspan="2">Информация</th>
+    </tr>
+    <tr>
+      <td>Старая цена: <s>1000 ₽</s></td>
+      <td>Новая цена: 500 ₽</td>
+    </tr>
+  </table>
+</body>
+</html>

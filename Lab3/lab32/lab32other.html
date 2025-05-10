@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MERNI Project</title>
+    <style>
+        /* Общие стили */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            padding-top: 120px; /* Отступ для фиксированного хедера */
+            background-color: #f8f9fa;
+        }
+
+        /* Фиксированный хедер */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #fff;
+            z-index: 1000;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        /* Меню под логотипом */
+        .header-menu {
+            background: #f1f1f1;
+            padding: 10px 0;
+        }
+
+        .header-menu a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #0066cc;           /* синие изначально */
+        }
+
+        .header-menu a:visited {
+            color: purple;            /* фиолетовые после клика */
+            text-decoration: underline;/* подчеркивание после клика */
+        }
+
+        .header-menu a:hover {
+            text-decoration: underline;
+        }
+
+        /* Индикатор устройства */
+        .device-type {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            padding: 10px;
+            background: #333;
+            color: white;
+            border-radius: 5px;
+            z-index: 999;
+        }
+
+        /* Синий круг */
+        .blue-circle {
+            width: 60px;
+            height: 60px;
+            background-color: blue;
+            border-radius: 50%;
+            position: fixed;
+            pointer-events: none;
+            transform: translate(-5%, +10%);
+            z-index: 9999;
+        }
+
+        /* Блок характеристики */
+        .feature-block {
+            background-color: #e9ecef; /* светло-серый фон */
+            padding: 20px;
+            margin: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .feature-block h2 {
+            font-weight: normal; /* убираем жирность */
+            margin: 0;
+        }
+
+        /* Основной контент */
+        .columns {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin-bottom: 150px;
+        }
+
+        .column {
+            background-color: #e9ecef; /* светло-серый фон */
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        /* Нижнее меню и футер */
+        .bottom-menu {
+            position: fixed;
+            bottom: 60px;
+            left: 0;
+            width: 100%;
+            background: #f1f1f1;
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #343a40; /* выделен цветом */
+            color: white;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            z-index: 99;
+        }
+
+        /* Адаптивность */
+        @media (max-width: 767px) {
+            .device-type::after { content: "Mobile"; }
+            .columns {
+                grid-template-columns: 1fr;
+            }
+            .header-menu a {
+                margin: 0 8px;
+                font-size: 14px;
+            }
+        }
+
+        @media (min-width: 768px) and (max-width: 1023px) {
+            .device-type::after { content: "Tablet"; }
+        }
+
+        @media (min-width: 1024px) {
+            .device-type::after { content: "Desktop"; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Хедер с логотипом и меню -->
+    <header>
+        <div class="logo">Логотип</div>
+        <nav class="header-menu">
+            <a href="#" target="_blank">Домой</a>
+            <a href="#" target="_blank">Товары</a>
+            <a href="#" target="_blank">Услуги</a>
+            <a href="#" target="_blank">О нас</a>
+            <a href="#" target="_blank">Контакты</a>
+        </nav>
+    </header>
+
+    <!-- Блок характеристики -->
+    <div class="feature-block">
+        <h2>Характеристика</h2>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="columns">
+        <div class="column">Колонка 1</div>
+        <div class="column">Колонка 2</div>
+        <div class="column">Колонка 3</div>
+    </div>
+
+    <!-- Футер и индикатор -->
+    <footer>© МЕРНІ 2023</footer>
+    <div class="device-type"></div>
+    <div class="blue-circle"></div>
+
+    <!-- Скрипт для движения круга -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const circle = document.querySelector('.blue-circle');
+            document.addEventListener('mousemove', (e) => {
+                circle.style.left = e.clientX + 'px';
+                circle.style.top = e.clientY + 'px';
+            });
+        });
+    </script>
+</body>
+</html>
